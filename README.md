@@ -31,7 +31,7 @@
 - [📝 License](#license)
 
 # 📖 [Bookstore ] <a name="about-project"></a>
-**[Bookstore ]** is  a website that display a list of space and allow the user to add new books or remove books from the store
+**[Bookstore ]** is  a website that display a list of space rockets and display its informations
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -54,9 +54,9 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **[Display a list of Books]**
-- **[Add a book to the list  ]**
-- **[Remove the Book form the list ]**
+- **[Display a list of Rockets ]**
+- **[Dispaly a couple of missions for each rocket  ]**
+- **[Displaying the profile section ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,13 +85,12 @@ To get a local copy up and running, follow these steps.
 ### Setup
 
 Clone this repository to your desired folder:
- https://github.com/ridabensalem/Bookstore-.git
-
+https://github.com/ridabensalem/Space-Travelers-Hub.git
  Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/ridabensalem/Bookstore-.git
+  https://github.com/ridabensalem/Space-Travelers-Hub.git
 ```
 
 ### Install
@@ -129,6 +128,17 @@ You can deploy this project using:
 - Twitter: [@coder_rida](https://twitter.com/coder_rida)
 - LinkedIn: [ridabesalem](https://linkedin.com/in/ridabensalem)
 
+👤 **Author2**
+
+- GitHub: [@coderacheal](https://github.com/coderacheal)
+- Twitter: [@coder_rida](https://twitter.com/coder_rida)
+- LinkedIn: [racheal-appiah-kubi-a230b7173/](https://www.linkedin.com/in/racheal-appiah-kubi-a230b7173/)
+
+👤 **Author3**
+
+- GitHub: [@Nezerwa](https://github.com/Nezerwa)
+- Twitter: [@Eligrand1](https://www.twitter.com/Eligrand1)
+- LinkedIn: [eligrand-nezerwa/](https://www.linkedin.com/in/eligrand-nezerwa/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -137,7 +147,7 @@ You can deploy this project using:
 
 - [ ] **[Full navigation of the page ]**
 - [ ] **[Improve the UI/UX design  ]**
-- [ ] **[Add more Features of filtering the books ]**
+- [ ] **[Add more Features of searching the Rockets and missions ]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
