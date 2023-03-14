@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import fetchDragon from './API';
 
 function Dragon({
+  // eslint-disable-next-line react/prop-types
   name, type, image,
 }) {
   return (
