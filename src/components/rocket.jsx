@@ -1,15 +1,14 @@
 import React from 'react';
-
-const ROCKET_URL = 'https://api.spacexdata.com/v4/rockets';
-const response = fetch(ROCKET_URL);
+import { useSelector } from 'react-redux';
+import { getRocketsDataFromAPI } from '../features/rockets/rocketSlice';
 
 const Rocket = () => {
-  const rockets = {};
+  const rockets = useSelector((store) => store.rockets);
 
   return (
     <div>
       <div>
-        <img src=''></img>
+        <img src='' alt='' />
       </div>
       <div>
         <h3>sdjkvn</h3>
