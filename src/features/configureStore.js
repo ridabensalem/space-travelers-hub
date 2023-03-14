@@ -1,5 +1,5 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import dragonSlice from './dragons/dragonSlice';
+import dragonSlice from './dragonSlice';
 
 const rootReducer = combineReducers({
   dragons: dragonSlice,
