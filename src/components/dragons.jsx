@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import fetchDragon from './API';
 
 function Dragon({
-  name, type,image
+  name, type, image,
 }) {
   return (
 
@@ -15,7 +15,7 @@ function Dragon({
     </div>
   );
 }
-Dragon.propTypes = { 
+Dragon.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
 };
@@ -34,7 +34,7 @@ function Dragons() {
           id={dragon.id}
           name={dragon.name}
           type={dragon.type}
-          image={dragon.flickr_images }
+          image={dragon.flickr_images}
         />
 
       ))}

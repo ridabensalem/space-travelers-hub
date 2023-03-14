@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import fetchDragon from '../components/API';
+
 const initialState = {
   dragonStore: [],
   status: 'idle',
