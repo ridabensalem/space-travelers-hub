@@ -1,58 +1,28 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
-
+import { createSlice } from '@reduxjs/toolkit';
+import fetchDragon from '../components/API';
 const initialState = {
-  dragons: [],
-  isLoading: false,
+  dragonStore: [],
+  status: 'idle',
+  error: null,
 };
 
-const FETCH_DRAGON_DATA = 'dragons/getDragonsData';
-
-export const getDragonData = createAsyncThunk(FETCH_DRAGON_DATA, async () => {
-  try {
-    const response = await axios.get('https://api.spacexdata.com/v3/dragons');
-
-    const dragonApi = [];
-    response.data.forEach((data) => {
-      const {
-        id,
-        name: dragonName,
-        description,
-        flickr_images: flickrImages,
-      } = data;
-      const dragonData = {
-        id,
-        dragonName,
-        description,
-        flickrImages,
-        reserved: false,
-      };
-      dragonApi.push(dragonData);
-    });
-
-    return dragonApi;
-  } catch (error) {
-    return error;
-  }
-});
-
-const dragonSlice = createSlice({
-  name: 'dragons',
+export const dragonSlice = createSlice({
+  name: 'dragon',
   initialState,
-  extraReducers: {
-    [getDragonData.fulfilled]: (state, action) => ({
-      ...state,
-      dragons: action.payload,
-      isLoading: false,
-    }),
-    [getDragonData.rejected]: (state) => ({
-      ...state,
-      isLoading: false,
-    }),
-    [getDragonData.pending]: (state) => ({
-      ...state,
-      isLoading: true,
-    }),
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchDragon.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchDragon.fulfilled, (state, action) => {
+        state.status = 'succeeded';
+        state.dragonStore = action.payload;
+      })
+      .addCase(fetchDragon.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
+      });
   },
 });
 
