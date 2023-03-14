@@ -1,19 +1,19 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const BaseURL = 'https://api.spacexdata.com/v3/missions';
+const BaseURL = 'https://api.spacexdata.com/v3/dragons';
 
-const fetchMission = createAsyncThunk(
-  'books/fetchMissions',
+const fetchDragon = createAsyncThunk(
+  'books/fetchDragons',
   async () => {
     const response = await axios.get(
       BaseURL,
     );
-    const missions = Object.keys(response.data).map((key) => ({
+    const dragons = Object.keys(response.data).map((key) => ({
       mission_id: key,
       ...response.data[key],
     }));
-    return missions;
+    return dragons;
   },
 );
-export default fetchMission;
+export default fetchDragon;

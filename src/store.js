@@ -1,9 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import missionReducer from './features/missionSclice';
+import dragonReducer from './features/dragonSlice';
 
 const store = configureStore({
   reducer: {
-    missionReducer,
+    dragonReducer,
+
   },
 });
 
