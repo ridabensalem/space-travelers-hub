@@ -1,5 +1,6 @@
 import Dragons from './dragons';
 import Header from './header';
+import Missions from './missions';
 
 function App() {
   return (
