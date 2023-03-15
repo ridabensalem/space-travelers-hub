@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import fetchMission from '../components/API';
+import fetchMission from '../components/API/apiMissions';
 
 const initialState = {
   missionStore: [],

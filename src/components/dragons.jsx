@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
-import fetchDragon from './API';
+import fetchDragon from './API/apiDragons';
 
 function Dragon({
   // eslint-disable-next-line react/prop-types

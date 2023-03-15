@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import fetchDragon from '../components/API';
+import fetchDragon from '../components/API/apiDragons';
 
 const initialState = {
   dragonStore: [],
