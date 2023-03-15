@@ -9,9 +9,9 @@ const Rocket = ({ rocket }) => {
   } = rocket;
 
   return (
-    <div>
+    <div className="rocketDiv">
       <div>
-        <img src={flickrImage} alt="hello" />
+        <img className="rocket-img" src={flickrImage} alt="hello" />
       </div>
       <div>
         <h3>{name}</h3>
