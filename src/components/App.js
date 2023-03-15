@@ -1,11 +1,12 @@
 import Header from './header';
-import Rocket from './rocket';
+// eslint-disable-next-line import/no-named-as-default
+import RocketContainer from './rocketContainer';
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Rocket />
+      <RocketContainer />
     </div>
   );
 }

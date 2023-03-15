@@ -3,7 +3,7 @@ import rocketReducer from './features/rockets/rocketSlice';
 
 const store = configureStore({
   reducer: {
-    rockets: rocketReducer,
+    rocket: rocketReducer,
   },
 });
 

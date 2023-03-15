@@ -1,22 +1,33 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import { getRocketsDataFromAPI } from '../features/rockets/rocketSlice';
+import PropTypes from 'prop-types';
 
-const Rocket = () => {
-  const rockets = useSelector((store) => store.rockets);
+const Rocket = ({ rocket }) => {
+  const {
+    name,
+    description,
+    flickrImage,
+  } = rocket;
 
   return (
     <div>
       <div>
-        <img src='' alt='' />
+        <img src={flickrImage} alt="hello" />
       </div>
       <div>
-        <h3>sdjkvn</h3>
-        <p>dsjvkn</p>
+        <h3>{name}</h3>
+        <p>{description}</p>
         <button type="button">Reserve Rocket</button>
       </div>
     </div>
   );
+};
+
+Rocket.propTypes = {
+  rocket: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    flickrImage: PropTypes.string,
+  }).isRequired,
 };
 
 export default Rocket;

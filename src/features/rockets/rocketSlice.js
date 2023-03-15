@@ -4,33 +4,36 @@ const ROCKET_URL = 'https://api.spacexdata.com/v4/rockets';
 
 const initialState = {
   rocketList: [],
-  isLoading: true,
-  error: null,
 };
 
 export const getRocketsDataFromAPI = () => createAsyncThunk(
   'getRocketsData', async () => {
-    const rocketData = await fetch(ROCKET_URL)
-      .then((response) => response.json())
+    const response = await fetch(ROCKET_URL)
+      .then((res) => res)
       .catch(() => false);
+    const rocketData = await response.data.map((obj) => ({
+      id: obj.id,
+      name: obj.rocket_name,
+      type: obj.rocket_type,
+      description: obj.description,
+      flickrImage: obj.flickr_images[0],
+      reserved: false,
+    }));
     return rocketData;
   },
 );
+
+getRocketsDataFromAPI();
 
 const rocketSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {},
-  extraReducers(builder) {
+  extraReducers: (builder) => {
     builder
-      .addCase(getRocketsDataFromAPI.fulfilled, (state, action) => {
-        const rockets = action.payload;
-        const rocketArr = Object.keys(rockets).map((id) => ({
-          id,
-          ...rockets[id][0],
-        }));
-        return { ...state, isLoading: false, rocketList: rocketArr };
-      });
+      .addCase(getRocketsDataFromAPI, (state, action) => ({
+        ...state, rocketList: action.payload,
+      }));
   },
 });
 
