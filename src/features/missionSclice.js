@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+
 import fetchMission from '../components/API/apiMissions';
 
 const initialState = {
@@ -10,7 +11,18 @@ const initialState = {
 export const missionSlice = createSlice({
   name: 'mission',
   initialState,
-  reducers: {},
+  reducers: {
+    reserveMission: (state, action) => {
+      const newState = { ...state };
+      newState.missionStore = newState.missionStore.map((mission) => {
+        if (mission.mission_id === action.payload) {
+          return { ...mission, reserved: !mission.reserved };
+        }
+        return mission;
+      });
+      return newState;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchMission.pending, (state) => {
@@ -25,6 +37,7 @@ export const missionSlice = createSlice({
         state.error = action.error.message;
       });
   },
-});
 
+});
+export const { reserveMission } = missionSlice.actions;
 export default missionSlice.reducer;
