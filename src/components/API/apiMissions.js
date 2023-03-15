@@ -11,6 +11,8 @@ const fetchMission = createAsyncThunk(
     );
     const missions = Object.keys(response.data).map((key) => ({
       mission_id: key,
+      reserved: false,
+      action: false,
       ...response.data[key],
     }));
     return missions;
