@@ -1,20 +1,8 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-
-const BaseURL = 'https://api.spacexdata.com/v3/dragons';
-
-export const fetchDragon = createAsyncThunk('dragon/fetchDragon', async () => {
-  const response = await axios.get(BaseURL);
-  const dragons = Object.keys(response.data).map((key) => ({
-    id: key,
-    ...response.data[key],
-    reserved: false,
-  }));
-  return dragons;
-});
+import { createSlice } from '@reduxjs/toolkit';
+import fetchDragon from '../components/API/apiDragons';
 
 const initialState = {
-  dragons: [],
+  dragonStore: [],
   status: 'idle',
   error: null,
 };
@@ -24,13 +12,9 @@ export const dragonSlice = createSlice({
   initialState,
   reducers: {
     reserveDragon: (state, action) => {
-      const id = action.payload;
-      state.dragons = state.dragons.map((dragon) => {
-        if (dragon.id === id) {
-          return { ...dragon, reserved: true };
-        }
-        return dragon;
-      });
+      const { id } = action.payload;
+      state.dragonStore = state.dragonStore.map((dragon) => (
+        dragon.id === id ? { ...dragon, reserved: true } : dragon));
     },
   },
   extraReducers: (builder) => {
@@ -40,7 +24,7 @@ export const dragonSlice = createSlice({
       })
       .addCase(fetchDragon.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.dragons = action.payload;
+        state.dragonStore = action.payload;
       })
       .addCase(fetchDragon.rejected, (state, action) => {
         state.status = 'failed';
