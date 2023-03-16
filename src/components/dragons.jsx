@@ -8,10 +8,12 @@ function Dragon({
   name, type, image, reserved, onReserve,
 }) {
   return (
-    <div>
+    <div className="dragons_container">
       <h1>{name}</h1>
       <p>{type}</p>
       <img src={image} alt={name} width="300" height="300" />
+      {' '}
+      <br />
       <button type="button" onClick={onReserve} disabled={reserved}>
         {reserved ? 'Reserved' : 'Reserve dragon'}
       </button>

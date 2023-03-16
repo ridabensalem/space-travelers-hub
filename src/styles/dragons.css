@@ -1,0 +1,11 @@
+.dragons_container {
+  padding: 0 20px;
+}
+
+.dragons_container button {
+  border: none;
+  background-color: #0984e3;
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+}

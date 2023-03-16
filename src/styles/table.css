@@ -1,0 +1,74 @@
+.header_table {
+  border-collapse: collapse;
+  border: 1px solid #dee2e6;
+}
+
+.missions_table {
+  border-collapse: collapse;
+}
+
+.mission_name {
+  width: 150px;
+}
+
+.header_mission {
+  width: 150px;
+}
+
+.header_description,
+.mission_description {
+  width: 150vh;
+}
+
+.header_status,
+.mission_status {
+  width: 10vh;
+  padding: 10px 10px;
+}
+
+table {
+  margin: 0 20px;
+  border: 1px solid #dee2e6;
+}
+
+.header_action,
+.mission_action {
+  width: 14vh;
+}
+
+/* button action styling  */
+.member_button {
+  background-color: #2980b9;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  margin-left: 10px;
+  padding: 2px 1px;
+}
+
+.not_member_button {
+  background-color: gray;
+  border: none;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.leave_button {
+  background-color: #fff;
+  border: 1px solid #e74c3c;
+  border-radius: 4px;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-left: 20px;
+  height: 30px;
+}
+
+.join_button {
+  background-color: #fff;
+  border: 2px solid gray;
+  height: 30px;
+  border-radius: 4px;
+  margin-left: 20px;
+  font-weight: bold;
+  color: gray;
+}

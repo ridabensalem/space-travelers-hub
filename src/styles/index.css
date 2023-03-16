@@ -1,4 +1,9 @@
 @import 'header.css';
+@import 'table.css';
+@import 'profile.css';
+@import 'rocket.css';
+@import 'rockets.css';
+@import 'dragons.css';
 
 body {
   margin: 0;
