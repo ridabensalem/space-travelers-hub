@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import fetchMission from './API/apiMissions';
-import { reserveMission } from '../features/missionSclice';
+import { reserveMission, leaveMission } from '../features/missionSclice';
 // header of the table
 function HeaderTable() {
   return (
@@ -31,12 +31,20 @@ function Mission({
           <td className="mission_name">{name}</td>
           <td className="mission_description">{description}</td>
           <td className="mission_status">
-            {reserved ? 'Member' : 'Not a Member'}
+            {reserved ? (
+              <button className="member_button" type="submit">Member</button>
+            ) : (
+              <button className="not_member_button" type="submit">Not a Member</button>
+            )}
+
           </td>
           <td className="mission_action">
-            <button type="submit" onClick={() => dispatch(reserveMission(id))}>
-              {reserved ? 'Leave Meeting' : 'Join Meeting'}
-            </button>
+            {reserved ? (
+              <button type="submit" onClick={() => dispatch(leaveMission(id))} className="leave_button">Leave session</button>
+            ) : (
+              <button type="submit" onClick={() => dispatch(reserveMission(id))} className="join_button">Join session</button>
+
+            )}
           </td>
         </tr>
       </table>
