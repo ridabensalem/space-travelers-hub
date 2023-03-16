@@ -4,6 +4,7 @@ import dragonReducer from './features/dragonSlice';
 const store = configureStore({
   reducer: {
     dragonReducer,
+
   },
 });
 
