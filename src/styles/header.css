@@ -1,7 +1,6 @@
 .logo {
   display: flex;
   flex-direction: row;
-  width: 20%;
   padding: 20px 20px;
 }
 
@@ -11,5 +10,15 @@
 
 .routeLinks {
   display: flex;
-  justify-content: flex-end;
+  width: 50vh;
+  justify-content: space-evenly;
+  position: relative;
+  left: 105vh;
+  top: 1vh;
+}
+
+/* navbar links  */
+a {
+  text-decoration: none;
+  color: #0984e3;
 }

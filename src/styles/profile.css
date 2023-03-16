@@ -1,0 +1,15 @@
+
+.Joined_mission_container {
+  border: 1px solid #dee2e6;
+  width: 50vh;
+  height: 50vh;
+}
+
+.my_missions {
+  padding: 0 40px;
+}
+
+.list_mission {
+  padding: 20px 10px;
+  border-bottom: 1px solid #dee2e6;
+}
