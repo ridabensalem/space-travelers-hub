@@ -20,6 +20,7 @@ Dragon.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
 };
+
 function Dragons() {
   const dragonsArr = useSelector((state) => state.dragonReducer.dragonStore);
   const dispatch = useDispatch();

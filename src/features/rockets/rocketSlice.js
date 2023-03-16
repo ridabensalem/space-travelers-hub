@@ -1,40 +1,48 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const ROCKET_URL = 'https://api.spacexdata.com/v4/rockets';
+const BaseURL = 'https://api.spacexdata.com/v4/rockets';
 
 const initialState = {
-  rocketList: [],
+  rockets: [],
+  status: false,
 };
 
-export const getRocketsDataFromAPI = () => createAsyncThunk(
-  'getRocketsData', async () => {
-    const response = await fetch(ROCKET_URL)
-      .then((res) => res)
-      .catch(() => false);
-    const rocketData = await response.data.map((obj) => ({
-      id: obj.id,
-      name: obj.rocket_name,
-      type: obj.rocket_type,
-      description: obj.description,
-      flickrImage: obj.flickr_images[0],
-      reserved: false,
-    }));
-    return rocketData;
-  },
-);
+export const fetchRockets = createAsyncThunk('rockets/fetchRockets', async () => {
+  const response = await axios.get(BaseURL);
+  const rockets = response.data;
+  return rockets.map((rocket) => (
+    {
+      id: rocket.id,
+      name: rocket.name,
+      description: rocket.description,
+      image: rocket.flickr_images[0],
+    }
+  ));
+});
 
-getRocketsDataFromAPI();
-
-const rocketSlice = createSlice({
+const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
-  reducers: {},
-  extraReducers: (builder) => {
+  reducers: {
+    reserveRocket: (state, { payload }) => {
+      const rockets = state.rockets.map((rocket) => {
+        if (rocket.id === payload) return { ...rocket, reserved: !rocket.reserved };
+        return rocket;
+      });
+      return { ...state, rockets };
+    },
+  },
+  extraReducers(builder) {
     builder
-      .addCase(getRocketsDataFromAPI, (state, action) => ({
-        ...state, rocketList: action.payload,
+      .addCase(fetchRockets.pending, (state) => ({ ...state, status: true }))
+      .addCase(fetchRockets.fulfilled, (state, action) => ({
+        ...state,
+        rockets: action.payload,
       }));
   },
 });
 
-export default rocketSlice.reducer;
+export const { reserveRocket } = rocketsSlice.actions;
+
+export default rocketsSlice.reducer;

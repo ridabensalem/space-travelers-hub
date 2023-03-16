@@ -53,7 +53,6 @@ function Missions() {
           description={mission.description}
           name={mission.mission_name}
         />
-
       ))}
     </div>
   );
