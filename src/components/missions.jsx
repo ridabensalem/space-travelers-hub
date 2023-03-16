@@ -78,7 +78,6 @@ function Missions() {
           action={mission.action}
 
         />
-
       ))}
     </div>
   );

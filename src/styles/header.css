@@ -8,3 +8,8 @@
 .logo h1 {
   padding: 0 20px;
 }
+
+.routeLinks {
+  display: flex;
+  justify-content: flex-end;
+}
