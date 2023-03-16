@@ -17,6 +17,7 @@ function HeaderTable() {
 
   );
 }
+// mission table
 function Mission({
   id,
   name,
