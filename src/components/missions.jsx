@@ -17,6 +17,21 @@ function HeaderTable() {
 
   );
 }
+function JoinedMissions() {
+  const missions = useSelector((state) => state.missionReducer.missionStore);
+  const filteredMissions = missions.filter((mission) => mission.reserved);
+
+  return (
+    <div className="Joined_mission_container">
+
+      {filteredMissions.map((mission) => (
+        <div className="list_mission" key={mission.mission_id}>{mission.mission_name}</div>
+      ))}
+    </div>
+  );
+}
+
+export { JoinedMissions };
 // mission table
 function Mission({
   id,

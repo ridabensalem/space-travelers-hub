@@ -1,6 +1,9 @@
 // import Dragons from './dragons';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './header';
+import Dragons from './dragons';
+import Profile from './profile';
+import Missions from './missions';
 import Rockets from './Rockets';
 
 function App() {
@@ -10,10 +13,10 @@ function App() {
         <Routes>
           <Route element={<Header />}>
             <Route path="/" element={<Rockets />} />
-            <Route path="/missions" />
+            <Route path="/missions" element={<Missions />} />
             |
-            <Route path="/myProfile" />
-            {/* <Route path="/dragons" element={<Dragons />} /> */}
+            <Route path="/myProfile" element={<Profile />} />
+            <Route path="/dragons" element={<Dragons />} />
           </Route>
         </Routes>
       </BrowserRouter>
