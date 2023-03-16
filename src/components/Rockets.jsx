@@ -15,7 +15,7 @@ const Rockets = () => {
   return (
     <div className="container">
       {status && rockets.map((each) => (
-        <article key={each.id} className="article">
+        <div key={each.id} className="article">
           <img src={each.image} className="img" alt={each.name} />
           <div>
             <h2 className={styles.title}>{each.name}</h2>
@@ -31,7 +31,7 @@ const Rockets = () => {
               {each.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
             </button>
           </div>
-        </article>
+        </div>
       ))}
     </div>
   );
