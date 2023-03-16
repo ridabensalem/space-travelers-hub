@@ -25,6 +25,7 @@ Dragon.propTypes = {
   reserved: PropTypes.bool.isRequired,
   onReserve: PropTypes.func.isRequired,
 };
+
 function Dragons() {
   const dragonsArr = useSelector((state) => state.dragonReducer.dragonStore);
   const dispatch = useDispatch();
