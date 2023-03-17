@@ -15,7 +15,7 @@ const Rockets = () => {
   return (
     <div className="container">
       {status && rockets.map((each) => (
-        <article key={each.id} className="article">
+        <div key={each.id} className="article">
           <img src={each.image} className="img" alt={each.name} />
           <div>
             <h2 className={styles.title}>{each.name}</h2>
@@ -25,15 +25,16 @@ const Rockets = () => {
             </p>
             <button
               type="button"
-              className={each.reserved ? styles.unreserve : styles.reserve}
+              className={each.reserved ? 'unreserve' : 'reserve'}
               onClick={() => dispatch(reserveRocket(each.id))}
             >
               {each.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
             </button>
           </div>
-        </article>
+        </div>
       ))}
     </div>
   );
 };
+
 export default Rockets;
