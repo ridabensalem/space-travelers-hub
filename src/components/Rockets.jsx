@@ -25,7 +25,7 @@ const Rockets = () => {
             </p>
             <button
               type="button"
-              className={each.reserved ? styles.unreserve : styles.reserve}
+              className={each.reserved ? 'unreserve' : 'reserve'}
               onClick={() => dispatch(reserveRocket(each.id))}
             >
               {each.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
@@ -36,4 +36,5 @@ const Rockets = () => {
     </div>
   );
 };
+
 export default Rockets;

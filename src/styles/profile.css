@@ -1,4 +1,3 @@
-
 .Joined_mission_container {
   border: 1px solid #dee2e6;
   width: 50vh;
@@ -12,4 +11,16 @@
 .list_mission {
   padding: 20px 10px;
   border-bottom: 1px solid #dee2e6;
+}
+
+.profileContainer {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.rocketReserved {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid gray;
 }

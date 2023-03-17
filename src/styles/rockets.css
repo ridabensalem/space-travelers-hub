@@ -1,14 +1,13 @@
 .article {
-  /* margin: 2% 0; */
   display: flex;
   align-items: flex-start;
   column-gap: 40px;
   margin-bottom: 40px;
-  background-color: red;
 }
 
 .img {
-  width: 25%;
+  width: 300px;
+  height: 250px;
 }
 
 .title {
@@ -16,32 +15,32 @@
 }
 
 .span {
-  background: rgb(27, 158, 191);
+  background: rgb(3, 166, 76);
   color: #fff;
-  padding: 4px 12px;
-  border-radius: 10px;
+  padding: 4px 9px;
+  border-radius: 4px;
   margin-right: 5px;
 }
 
 .reserve,
 .unreserve {
-  background-color: rgb(30, 135, 255);
+  background-color: rgb(24, 145, 44);
   color: #fff;
-  font-size: 16px;
   border: none;
   border-radius: 5px;
-  padding: 1.5% 3%;
+  padding: 10px;
   cursor: pointer;
 }
 
 .unreserve {
-  background: #fff;
-  color: #000;
-  border: 1px solid gray;
+  /* background: #e60000; */
+  color: white;
+  font-weight: bold;
 }
 
 .rocketDetails {
   line-height: 1.5;
+  width: 90%;
 }
 
 .container {
