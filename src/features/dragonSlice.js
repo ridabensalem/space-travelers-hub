@@ -3,6 +3,7 @@ import fetchDragon from '../components/API/apiDragons';
 
 const initialState = {
   dragonStore: [],
+  reservedDragon: [],
   status: 'idle',
   error: null,
 };
@@ -13,13 +14,19 @@ export const dragonSlice = createSlice({
   reducers: {
     reserveDragon: (state, action) => {
       const { id } = action.payload;
-      state.dragonStore = state.dragonStore.map((dragon) => (
-        dragon.id === id ? { ...dragon, reserved: true } : dragon));
+      state.dragonStore = state.dragonStore.map(
+        (dragon) => (dragon.id === id ? { ...dragon, reserved: true } : dragon),
+      );
+      state.reservedDragon = [...state.reservedDragon, id];
     },
     cancelDragon: (state, action) => {
       const { id } = action.payload;
-      state.dragonStore = state.dragonStore.map((dragon) => (
-        dragon.id === id ? { ...dragon, reserved: false } : dragon));
+      state.dragonStore = state.dragonStore.map(
+        (dragon) => (dragon.id === id ? { ...dragon, reserved: false } : dragon),
+      );
+      state.reservedDragon = state.reservedDragon.filter(
+        (dragonId) => dragonId !== id,
+      );
     },
   },
   extraReducers: (builder) => {
