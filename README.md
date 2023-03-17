@@ -131,7 +131,6 @@ You can deploy this project using:
 👤 **Author2**
 
 - GitHub: [@coderacheal](https://github.com/coderacheal)
-- Twitter: [@coder_rida](https://twitter.com/coder_rida)
 - LinkedIn: [racheal-appiah-kubi-a230b7173/](https://www.linkedin.com/in/racheal-appiah-kubi-a230b7173/)
 
 👤 **Author3**
