@@ -8,17 +8,21 @@
   padding: 0 20px;
 }
 
-.routeLinks {
-  display: flex;
-  width: 50vh;
-  justify-content: space-evenly;
-  position: relative;
-  left: 105vh;
-  top: 1vh;
-}
-
 /* navbar links  */
 a {
   text-decoration: none;
   color: #0984e3;
+}
+
+.container_nav {
+  display: flex;
+  justify-content: space-between;
+  width: 99%;
+}
+
+.routeLinks {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  width: 50vh;
 }
