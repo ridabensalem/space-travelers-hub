@@ -58,13 +58,13 @@ table {
   color: #e74c3c;
   font-weight: bold;
   margin-left: 20px;
-  height: 30px;
+  height: 40px;
 }
 
 .join_button {
   background-color: #fff;
   border: 2px solid gray;
-  height: 30px;
+  height: 40px;
   border-radius: 4px;
   font-weight: bold;
   color: gray;
