@@ -33,7 +33,7 @@
 }
 
 .unreserve {
-  /* background: #e60000; */
+  background: #e60000;
   color: white;
   font-weight: bold;
 }
@@ -46,4 +46,24 @@
 .container {
   width: 90%;
   margin: auto;
+}
+
+.rocketDiv {
+  width: 90%;
+  background-color: red;
+}
+
+p {
+  width: 70%;
+}
+
+.rocket-img {
+  width: 50px;
+  height: 50px;
+}
+
+.rocket {
+  border: 1px solid #dee2e6;
+  width: 50vh;
+  height: 40vh;
 }
