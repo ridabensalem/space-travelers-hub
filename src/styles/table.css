@@ -42,8 +42,6 @@ table {
   border: none;
   border-radius: 25px;
   color: #fff;
-  margin-left: 10px;
-  padding: 2px 1px;
 }
 
 .not_member_button {
@@ -68,7 +66,6 @@ table {
   border: 2px solid gray;
   height: 30px;
   border-radius: 4px;
-  margin-left: 20px;
   font-weight: bold;
   color: gray;
 }

@@ -56,9 +56,9 @@ function Mission({
           </td>
           <td className="mission_action">
             {reserved ? (
-              <button type="submit" onClick={() => dispatch(leaveMission(id))} className="leave_button">Leave session</button>
+              <button type="submit" onClick={() => dispatch(leaveMission(id))} className="leave_button">Leave mission</button>
             ) : (
-              <button type="submit" onClick={() => dispatch(reserveMission(id))} className="join_button">Join session</button>
+              <button type="submit" onClick={() => dispatch(reserveMission(id))} className="join_button">Join mission</button>
 
             )}
           </td>
