@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions Render Missions Component 1`] = `
+<div>
+  <table
+    border={1}
+    className="header_table"
+  >
+    <tr>
+      <th
+        className="header_mission"
+      >
+        Mission
+      </th>
+      <th
+        className="header_description"
+      >
+        Description
+      </th>
+      <th
+        className="header_status"
+      >
+        status
+      </th>
+      <th
+        aria-label="empty"
+        className="header_action"
+      />
+    </tr>
+  </table>
+</div>
+`;
