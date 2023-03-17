@@ -1,20 +1,14 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { JoinedMissions } from './missions';
+import { ReserveDragons } from './dragons';
 
 function Profile() {
-  const reservedDragon = useSelector(
-    (state) => state.dragonReducer.reservedDragon,
-  );
-
   return (
     <div>
       <div className="my_dragons">
         <h2>My Dragons</h2>
-        <ul>
-          {reservedDragon.map((id) => (
-            <li key={id}>{id}</li>
-          ))}
+        <ul className="dragons_list">
+          <ReserveDragons />
         </ul>
       </div>
       <div className="my_missions">
