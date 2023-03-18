@@ -20,7 +20,6 @@ function HeaderTable() {
 function JoinedMissions() {
   const missions = useSelector((state) => state.missionReducer.missionStore);
   const filteredMissions = missions.filter((mission) => mission.reserved);
-
   return (
     <div className="Joined_mission_container">
 
@@ -75,10 +74,11 @@ Mission.propTypes = { // Add
 };
 function Missions() {
   const missionsArr = useSelector((state) => state.missionReducer.missionStore);
+  const status = useSelector((state) => state.missionReducer.status);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchMission());
-  }, [dispatch]);
+    if (status === 'idle') dispatch(fetchMission());
+  }, [dispatch, status]);
 
   return (
     <div>
