@@ -1,0 +1,24 @@
+.dragons_container {
+  padding: 0 20px;
+}
+
+.dragons_container button {
+  border: none;
+  background-color: #0984e3;
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+  position: relative;
+  bottom: 50px;
+}
+
+.my_dragons {
+  padding: 0 40px;
+}
+
+.dragons_list {
+  border: 1px solid #dee2e6;
+  height: 40vh;
+  width: 46vh;
+}
