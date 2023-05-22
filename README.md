@@ -30,8 +30,8 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 [Bookstore ] <a name="about-project"></a>
-**[Bookstore ]** is  a website that display a list of space rockets and display its informations
+# 📖 [Space Traveler ] <a name="about-project"></a>
+**[Space Traveler ]** is  a website that display a list of space rockets and display its informations
 
 ## 🛠 Built With <a name="built-with"></a>
 
