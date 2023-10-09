@@ -7,7 +7,6 @@
   <h3><b>Space Travelers Hub  README</b></h3>
 </div>
 
-
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
