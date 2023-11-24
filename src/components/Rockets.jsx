@@ -20,6 +20,7 @@ const Rockets = () => {
           <div>
             <h2 className={styles.title}>{each.name}</h2>
             <p className="rocketDetails">
+{/*Check if the rocket is reserved                 */}
               {each.reserved ? <span className="span">Reserved</span> : ''}
               {each.description}
             </p>
